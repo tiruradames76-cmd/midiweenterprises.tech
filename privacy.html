@@ -23,64 +23,70 @@
             margin: 0;
         }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 100px 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 120px 20px; }
         
         nav {
             position: fixed; top: 0; width: 100%; background: rgba(3, 7, 18, 0.9);
             backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
+            z-index: 1000;
         }
 
         .nav-inner { display: flex; align-items: center; height: 70px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .back-link { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+        .back-link { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        .back-link:hover { opacity: 0.8; }
 
-        h1 { font-size: 2.5rem; margin-bottom: 2rem; color: white; }
-        h2 { font-size: 1.5rem; margin-top: 3rem; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-        p, li { color: var(--text-dim); margin-bottom: 1rem; }
-        ul { padding-left: 20px; }
+        h1 { font-size: 3rem; margin-bottom: 1rem; color: white; letter-spacing: -1px; }
+        h2 { font-size: 1.5rem; margin-top: 2.5rem; color: var(--text-main); font-weight: 800; }
+        p, li { color: var(--text-dim); margin-bottom: 1.2rem; font-size: 1.05rem; }
+        ul { padding-left: 20px; margin-bottom: 1.5rem; }
 
-        .date { color: var(--primary); font-weight: 600; margin-bottom: 3rem; }
+        .date-box { margin-bottom: 2rem; }
+        .date { color: var(--text-dim); font-weight: 800; }
         
-        footer { margin-top: 100px; padding: 40px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.9rem; }
+        strong { color: var(--text-main); }
+
+        footer { margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border); text-align: center; font-size: 0.9rem; color: var(--text-dim); }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="nav-inner">
-            <a href="index.html" class="back-link">← Back to Midiwe Enterprises</a>
+            <a href="index.html" class="back-link">[Back to Home]</a>
         </div>
     </nav>
 
     <div class="container">
-        <p class="date">Effective Date: April 18, 2026</p>
         <h1>Privacy Policy</h1>
+        
+        <div class="date-box">
+            <p class="date">Last Updated: March 2026</p>
+        </div>
 
         <p>At Midiwe Enterprises, accessible from <strong>midiweenterprises.tech</strong>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Midiwe Enterprises and how we use it.</p>
 
         <h2>1. Information We Collect</h2>
-        <p>If you contact us directly via the email provided on our site (info@midiweenterprises.tech), we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us.</p>
-
-        <h2>2. How We Use Your Information</h2>
+        <p>Midiwe Enterprises is designed to provide IT consulting and technical support with minimal data collection. We may collect:</p>
         <ul>
-            <li>To provide, operate, and maintain our IT consulting services.</li>
-            <li>To improve, personalize, and expand our website offerings.</li>
-            <li>To understand and analyze how you use our website.</li>
-            <li>To communicate with you regarding support or project updates.</li>
-            <li>To find and prevent fraud.</li>
+            <li><strong>Device Information:</strong> To ensure technical solutions and support are delivered correctly to your specific hardware or infrastructure model.</li>
+            <li><strong>Technical Preferences:</strong> Your selected service tiers and IT requirements are stored to personalize your business experience.</li>
         </ul>
 
-        <h2>3. Log Files</h2>
-        <p>Midiwe Enterprises follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, and referring/exit pages.</p>
+        <h2>2. Background Data Usage</h2>
+        <p>Our infrastructure uses background services to provide real-time system health alerts and security monitoring. This process checks for technical updates at regular intervals. No personal browsing data or location data is tracked during this process.</p>
 
-        <h2>4. Data Security</h2>
-        <p>As an IT consulting firm, we take data security seriously. We use commercially acceptable means to protect your personal information, but remember that no method of transmission over the internet or method of electronic storage is 100% secure.</p>
+        <h2>3. How We Use Your Information</h2>
+        <p>We use the information we collect to maintain our consulting platform, improve user experience, and send notifications for critical system events (security patches, support updates, and project milestones).</p>
 
-        <h2>5. Your Rights</h2>
-        <p>You have the right to request copies of your personal data, request that we correct any information you believe is inaccurate, or request that we erase your personal data under certain conditions.</p>
+        <h2>4. Third-Party Services</h2>
+        <p>We use reliable technology and data APIs. These providers do not have access to your personal identity. We utilize secure encrypted standards for all notification and data delivery.</p>
 
-        <h2>6. Contact Us</h2>
-        <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at:</p>
-        <p><strong>Email:</strong> info@midiweenterprises.tech</p>
+        <h2>5. Security</h2>
+        <p>We value your trust and strive to use commercially acceptable means of protecting your information.</p>
+
+        <h2 style="margin-top: 3rem;">Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:</p>
+        <p>Email: <strong>info@midiweenterprises.tech</strong></p>
 
         <footer>
             &copy; 2026 Midiwe Enterprises. All rights reserved.
