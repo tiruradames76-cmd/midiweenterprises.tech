@@ -88,10 +88,28 @@
         }
 
         /* --- Footer --- */
-        footer { padding: 4rem 0; text-align: center; color: var(--text-dim); font-size: 0.9rem; }
-        .footer-links { margin-top: 15px; }
-        .footer-links a { color: var(--text-dim); text-decoration: none; transition: 0.3s; margin: 0 10px; }
-        .footer-links a:hover { color: var(--primary); }
+        footer { 
+            padding: 6rem 0; /* Increased padding so it's not at the very bottom edge */
+            text-align: center; 
+            color: var(--text-dim); 
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+        .privacy-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 16px;
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .privacy-link:hover {
+            background: var(--primary);
+            color: #000;
+        }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
@@ -135,56 +153,4 @@
                     </div>
                 </div>
                 <div class="card">
-                    <p style="font-style: italic; color: var(--text-main);">"Our mission is to empower enterprises with robust, future-proof IT infrastructure that stands the test of time and security threats."</p>
-                    <p style="margin-top: 1rem; font-weight: bold;">— The Midiwe Team</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <div class="center">
-                <h2>Our Services</h2>
-                <p class="sub-h2">Specialized IT solutions tailored to your unique business requirements.</p>
-            </div>
-            <div class="grid">
-                <div class="card">
-                    <h3>Cloud Architecture</h3>
-                    <p>Designing scalable AWS and Azure environments that reduce costs and improve performance.</p>
-                </div>
-                <div class="card">
-                    <h3>Network Security</h3>
-                    <p>Protecting your perimeter with advanced firewall management and zero-trust security.</p>
-                </div>
-                <div class="card">
-                    <h3>IT Governance</h3>
-                    <p>Ensuring your systems meet international compliance standards and business best practices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="support" class="center">
-        <div class="container">
-            <div class="support-box">
-                <h2>Technical Support</h2>
-                <p class="sub-h2">Need immediate assistance? Our support desk is ready to help you resolve technical issues and maintain system integrity.</p>
-                <p style="margin-bottom: 2rem;">Current Client Support Email:</p>
-                <a href="mailto:info@midiweenterprises.tech" class="btn" style="background: white;">info@midiweenterprises.tech</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Midiwe Enterprises. Built for Excellence.</p>
-            <p style="margin-top: 10px;">Domain: midiweenterprises.tech</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                    <p style="font-style: italic; color: var(--text-main);">"Our mission is to empower enterprises with robust, future-proof IT infrastructure that stands the
