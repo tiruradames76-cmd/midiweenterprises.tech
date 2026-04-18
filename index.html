@@ -3,125 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midiwe Enterprises | IT Consulting & Support</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Midiwe Enterprises | IT Consulting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #38bdf8;
-            --bg: #030712;
-            --card-bg: #111827;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --border: #1f2937;
+            --bg: #0f172a; /* Slightly lighter than pitch black to see contrast */
+            --card: #1e293b;
+            --text: #f8fafc;
+            --dim: #94a3b8;
+            --border: #334155;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
             background-color: var(--bg);
-            color: var(--text-main);
+            color: var(--text);
             font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* --- Navigation --- */
+        /* Navigation */
         nav {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: rgba(3, 7, 18, 0.9);
+            background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        .nav-inner {
-            display: flex; justify-content: space-between; align-items: center; height: 80px;
-        }
-        .logo { font-weight: 800; font-size: 1.4rem; text-decoration: none; color: white; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 800; font-size: 1.2rem; color: white; text-decoration: none; }
         .logo span { color: var(--primary); }
-        .nav-links a {
-            text-decoration: none; color: var(--text-dim);
-            margin-left: 2rem; font-weight: 600; font-size: 0.9rem;
-            transition: 0.3s;
-        }
-        .nav-links a:hover { color: var(--primary); }
 
-        /* --- Sections --- */
-        section { padding: 100px 0; border-bottom: 1px solid var(--border); }
-        .center { text-align: center; }
-        h2 { font-size: 2.5rem; margin-bottom: 1rem; letter-spacing: -1px; }
-        .sub-h2 { color: var(--text-dim); margin-bottom: 3rem; max-width: 600px; margin-inline: auto; }
+        /* Hero Section */
+        header { padding: 100px 0; text-align: center; }
+        h1 { font-size: 3rem; margin-bottom: 20px; line-height: 1.2; }
+        .hero-p { color: var(--dim); font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px; }
 
-        /* --- Home (Hero) --- */
-        #home {
-            padding-top: 200px;
-            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
-        }
-        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; }
-        .btn {
-            background: var(--primary); color: #000;
-            padding: 1rem 2rem; border-radius: 10px;
-            text-decoration: none; font-weight: 700; display: inline-block;
-            transition: 0.3s;
-        }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2); }
+        /* Generic Section Styling */
+        section { padding: 80px 0; border-top: 1px solid var(--border); }
+        h2 { font-size: 2rem; margin-bottom: 40px; text-align: center; }
 
-        /* --- About --- */
-        .about-content {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
-        }
-        .stats { display: flex; gap: 2rem; margin-top: 2rem; }
-        .stat-item h4 { color: var(--primary); font-size: 1.5rem; }
+        /* Services Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
 
-        /* --- Services --- */
-        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .card {
-            background: var(--card-bg); padding: 2.5rem; border-radius: 20px;
-            border: 1px solid var(--border); transition: 0.3s;
-        }
-        .card:hover { border-color: var(--primary); }
-        .card h3 { margin-bottom: 1rem; color: var(--primary); }
-
-        /* --- Support --- */
-        .support-box {
-            background: linear-gradient(rgba(56, 189, 248, 0.05), rgba(56, 189, 248, 0.05));
-            padding: 4rem; border-radius: 30px; border: 1px dashed var(--primary);
-        }
-
-        /* --- Footer --- */
-        footer { 
-            padding: 5rem 0; 
-            text-align: center; 
-            color: var(--text-dim); 
+        /* Footer & Privacy Link */
+        footer {
+            padding: 100px 0;
+            text-align: center;
             background: #020617;
-            border-top: 1px solid var(--border);
+            border-top: 2px solid var(--primary);
         }
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+        .footer-text { margin-bottom: 30px; color: var(--dim); }
+        
         .privacy-btn {
             display: inline-block;
-            color: var(--primary);
+            background: var(--primary);
+            color: #0f172a;
+            padding: 15px 35px;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 700;
-            padding: 12px 32px;
-            border: 2px solid var(--primary);
-            border-radius: 12px;
-            transition: all 0.3s ease;
+            font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.85rem;
+            transition: transform 0.2s;
         }
-        .privacy-btn:hover {
-            background: var(--primary);
-            color: #000;
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
-            transform: translateY(-2px);
-        }
+        .privacy-btn:hover { transform: scale(1.05); }
 
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .about-content, .grid { grid
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="#" class="logo">MIDIWE<span>.ENTERPRISES</span></a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Expert IT Consulting</h1>
+            <p class="hero-p">Providing technical backbone and infrastructure solutions for the modern enterprise.</p>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable infrastructure for growing businesses.</p>
+                </div>
+                <div class="card">
+                    <h3>Cyber Security</h3>
+                    <p>Advanced protection for your digital assets.</p>
+                </div>
+                <div class="card">
+                    <h3>IT Support</h3>
+                    <p>24/7 technical monitoring and assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-text">
+                <p>&copy; 2026 Midiwe Enterprises. Built for Excellence.</p>
+                <p>Contact: info@midiweenterprises.tech</p>
+            </div>
+            
+            <a href="privacypolicy.html" class="privacy-btn">View Privacy Policy</a>
+        </div>
+    </footer>
+
+</body>
+</html>
