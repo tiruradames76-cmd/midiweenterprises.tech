@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midiwe Enterprises | Strategic IT Consulting & Support</title>
+    <title>Midiwe Enterprises | Strategic IT Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -46,62 +46,62 @@
         }
         .nav-links a:hover { color: var(--primary); }
 
-        /* --- Sections --- */
-        section { padding: 120px 0; border-bottom: 1px solid var(--border); }
-        .center { text-align: center; }
-        h2 { font-size: 2.8rem; margin-bottom: 1.5rem; letter-spacing: -1.5px; }
-        .sub-h2 { color: var(--text-dim); margin-bottom: 3rem; max-width: 650px; margin-inline: auto; font-size: 1.1rem; }
-
-        /* --- Home (Hero) --- */
+        /* --- Hero --- */
         #home {
-            padding-top: 220px;
-            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent);
+            padding: 220px 0 120px;
+            text-align: center;
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent);
         }
-        h1 { font-size: clamp(2.8rem, 7vw, 4.8rem); line-height: 1.05; margin-bottom: 1.8rem; letter-spacing: -3px; }
+        h1 { font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -2px; }
         .btn {
             background: var(--primary); color: #000;
             padding: 1.1rem 2.5rem; border-radius: 12px;
             text-decoration: none; font-weight: 800; display: inline-block;
-            transition: all 0.3s ease;
+            transition: 0.3s;
         }
-        .btn:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(56, 189, 248, 0.25); background: #7dd3fc; }
+        .btn:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2); }
+
+        /* --- Sections --- */
+        section { padding: 100px 0; border-bottom: 1px solid var(--border); }
+        h2 { font-size: 2.8rem; margin-bottom: 1rem; letter-spacing: -1.5px; text-align: center; }
+        .sub-h2 { color: var(--text-dim); margin-bottom: 4rem; max-width: 600px; margin-inline: auto; text-align: center; }
 
         /* --- About --- */
         .about-content {
-            display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 5rem; align-items: center;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
         }
-        .stats { display: flex; gap: 3rem; margin-top: 2.5rem; }
-        .stat-item h4 { color: var(--primary); font-size: 1.8rem; font-weight: 800; }
-        .stat-item p { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); }
+        .stats { display: flex; gap: 2rem; margin-top: 2rem; }
+        .stat-item h4 { color: var(--primary); font-size: 1.8rem; }
 
-        /* --- Services (Grid) --- */
+        /* --- Services --- */
         .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .card {
-            background: var(--card-bg); padding: 3rem; border-radius: 24px;
-            border: 1px solid var(--border); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: var(--card-bg); padding: 2.5rem; border-radius: 24px;
+            border: 1px solid var(--border); transition: 0.3s;
         }
-        .card:hover { border-color: var(--primary); transform: translateY(-10px); background: #1f2937; }
-        .card h3 { margin-bottom: 1.2rem; color: var(--primary); font-size: 1.4rem; }
-        .card p { color: var(--text-dim); font-size: 0.95rem; }
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+        .card h3 { color: var(--primary); margin-bottom: 1rem; }
 
-        /* --- Support Section --- */
+        /* --- Support --- */
         .support-box {
-            background: rgba(56, 189, 248, 0.03);
-            padding: 5rem 2rem; border-radius: 40px; border: 1px dashed var(--primary);
-            max-width: 900px; margin: 0 auto;
+            background: rgba(56, 189, 248, 0.05);
+            padding: 4rem; border-radius: 30px; border: 1px dashed var(--primary);
+            text-align: center;
         }
 
         /* --- Footer --- */
-        footer { padding: 5rem 0 3rem; text-align: center; }
-        .footer-links { margin-bottom: 2rem; }
-        .footer-links a { color: var(--text-dim); text-decoration: none; margin: 0 15px; font-size: 0.9rem; transition: 0.3s; }
+        footer { padding: 4rem 0; border-top: 1px solid var(--border); }
+        .footer-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            color: var(--text-dim); font-size: 0.9rem;
+        }
+        .footer-links a { color: var(--text-dim); text-decoration: none; margin-left: 20px; transition: 0.3s; }
         .footer-links a:hover { color: var(--primary); }
-        .copyright { color: var(--text-dim); font-size: 0.85rem; opacity: 0.7; }
 
-        @media (max-width: 968px) {
+        @media (max-width: 850px) {
             .about-content, .grid { grid-template-columns: 1fr; }
-            h1 { font-size: 3.2rem; }
             .nav-links { display: none; }
+            .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
@@ -112,4 +112,16 @@
             <a href="#home" class="logo">MIDIWE<span>.ENTERPRISES</span></a>
             <div class="nav-links">
                 <a href="#home">Home</a>
-                <a href="#about">About
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#support">Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <h1>IT Strategy for <br>Modern Enterprise.</h1>
+            <p class="sub-h2">Midiwe Enterprises bridges the gap between complex technology and business growth through expert IT consulting.</p>
+            <div style="text-align: center;">
+                <a href="mailto:info@midiwe
